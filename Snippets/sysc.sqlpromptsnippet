@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>sysc</Title>
+      <Shortcut>sysc</Shortcut>
+      <Description>查询表列信息</Description>
+      <Author />
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations />
+      <Code Language="sql"><![CDATA[SELECT 
+    c.name AS '列名',
+    ep.value AS '说明',
+    t.name AS '数据类型',
+    c.max_length AS '长度',
+    c.is_nullable AS '可空'
+FROM sys.columns c
+INNER JOIN sys.types t ON c.user_type_id = t.user_type_id
+LEFT OUTER JOIN sys.extended_properties ep ON ep.major_id = c.object_id AND ep.minor_id = c.column_id AND ep.name = 'MS_Description'
+WHERE c.object_id = OBJECT_ID('$PASTE$')
+order by c.name]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

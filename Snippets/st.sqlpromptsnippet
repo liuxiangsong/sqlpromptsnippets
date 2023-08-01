@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>st</Title>
+      <Shortcut>st</Shortcut>
+      <Description>查询前100行</Description>
+      <Author />
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations />
+      <Code Language="sql"><![CDATA[SELECT TOP (100) * FROM ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

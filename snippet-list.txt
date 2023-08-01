@@ -100,6 +100,8 @@ ssf     SELECT * FROM fragment
 ssf2    SELECT * FROM fragment, formatted nicely with tabs and newline.
 sst     SELECT TOP 1000 * FROM
 st100   SELECT top 100 rows
+st   SELECT top 100 rows
+sysc 查询表列信息，并把剪切板中的内容粘贴到表名处
 sxa     Change the current XACT_ABORT setting
 tc      TRY ... CATCH fragment
 today   CAST(GETDATE() as date) fragment
